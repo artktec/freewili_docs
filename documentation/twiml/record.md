@@ -1,6 +1,6 @@
 %twiml.Record
 
-TwiML `<Record>`
+TwiML <Record>
 =====================
 
 The `<Record>` verb records the caller's voice and returns to you the URL of a file containing the audio recording. You can optionally generate text transcriptions of recorded calls by setting the 'transcribe' attribute of the `<Record>` verb to 'true'.
@@ -15,7 +15,7 @@ action              relative or         current document URL
                     absolute URL
 method              GET, POST           POST
 timeout             positive integer    5
-finishOnKey         any digit, #, *     1234567890*#
+finishOnKey         any digit, \#, \*     1234567890\*\#
 maxLength           integer greater     3600 (1 hour) 
                     than 1
 transcribe          true, false         false
@@ -45,7 +45,7 @@ The 'method' attribute takes the value 'GET' or 'POST'. This tells Freewili whet
 The 'timeout' attribute tells Freewili to end the recording after a number of seconds of silence has passed. The default is 5 seconds.
 
 ### finishOnKey ###
-The 'finishOnKey' attribute lets you choose a set of digits that end the recording when entered. For example, if you set 'finishOnKey' to '#' and the caller presses '#', Freewili will immediately stop recording and submit 'RecordingUrl', 'RecordingDuration', and the '#' as parameters in a request to the 'action' URL. The allowed values are the digits 0-9, '#' and '*'. The default is '1234567890*#' (i.e. any key will end the recording). Unlike `<Gather>`, you may specify more than one character as a 'finishOnKey' value.
+The 'finishOnKey' attribute lets you choose a set of digits that end the recording when entered. For example, if you set 'finishOnKey' to '\#' and the caller presses '\#', Freewili will immediately stop recording and submit 'RecordingUrl', 'RecordingDuration', and the '\#' as parameters in a request to the 'action' URL. The allowed values are the digits 0-9, '\#' and '\*'. The default is '1234567890\*\#' (i.e. any key will end the recording). Unlike `<Gather>`, you may specify more than one character as a 'finishOnKey' value.
 
 ### maxLength ###
 The 'maxLength' attribute lets you set the maximum length for the recording in seconds. If you set 'maxLength' to '30', the recording will automatically end after 30 seconds of recorded time has elapsed. This defaults to 3600 seconds (one hour) for a normal recording and 120 seconds (two minutes) for a transcribed recording.
@@ -84,7 +84,7 @@ Examples
 --------
 
 ### Example: _Simple Record_ ###
-Freewili will execute the `<Record>` verb causing the caller to hear a beep and the recording to start. If the caller is silent for more than 5 seconds, hits the '#' key, or the recording maxlength time is hit, Freewili will make an HTTP POST request to the default 'action' (the current document URL) with the parameters 'RecordingUrl' and 'RecordingDuration'.
+Freewili will execute the `<Record>` verb causing the caller to hear a beep and the recording to start. If the caller is silent for more than 5 seconds, hits the '\#' key, or the recording maxlength time is hit, Freewili will make an HTTP POST request to the default 'action' (the current document URL) with the parameters 'RecordingUrl' and 'RecordingDuration'.
 
 ~~~{ .xml }
 <?xml version="1.0" encoding="UTF-8"?>

@@ -1,6 +1,6 @@
 %twiml.Say
 
-TwiML `<Say>`
+TwiML <Say>
 ==================
 
 The `<Say>` verb converts text to speech that is read back to the caller. `<Say>` is useful for development or saying dynamic text that is difficult to pre-record.

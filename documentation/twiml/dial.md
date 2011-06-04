@@ -1,6 +1,6 @@
 %twiml.Dial
 
-TwiML `<Dial>`
+TwiML <Dial>
 ===================
 
 The `<Dial>` verb connects the current caller to an another phone. If the called party picks up, the two parties are connected and can communicate until one hangs up. If the called party does not pick up, if a busy signal is received, or if the number doesn't exist, the dial verb will finish.
@@ -54,7 +54,7 @@ The 'method' attribute takes the value 'GET' or 'POST'. This tells Freewili whet
 The 'timeout' attribute sets the limit in seconds that `<Dial>` waits for the called party to answer the call. Basically, how long should Freewili let the call ring before giving up and reporting 'no-answer' as the 'DialCallStatus'.
 
 ### hangupOnStar ###
-The 'hangupOnStar' attribute lets the calling party hang up on the called party by pressing the '*' key on his phone. When two parties are connected using `<Dial>`, Freewili blocks execution of further verbs until the caller or called party hangs up. This feature allows the calling party to hang up on the called party without having to hang up her phone and ending her TwiML processing session. When the caller presses '*' Freewili will hang up on the called party. If an 'action' URL was provided, Freewili submits 'completed' as the 'DialCallStatus' to the URL and processes the response. If no 'action' was provided Freewili will continue on to the next verb in the current TwiML document.
+The 'hangupOnStar' attribute lets the calling party hang up on the called party by pressing the '\*' key on his phone. When two parties are connected using `<Dial>`, Freewili blocks execution of further verbs until the caller or called party hangs up. This feature allows the calling party to hang up on the called party without having to hang up her phone and ending her TwiML processing session. When the caller presses '*' Freewili will hang up on the called party. If an 'action' URL was provided, Freewili submits 'completed' as the 'DialCallStatus' to the URL and processes the response. If no 'action' was provided Freewili will continue on to the next verb in the current TwiML document.
 
 ### timeLimit ###
 The 'timeLimit' attribute sets the maximum duration of the `<Dial>` in seconds. For example, by setting a time limit of 120 seconds `<Dial>` will hang up on the called party automatically two minutes into the phone call. By default, there is a four hour time limit set on calls.
@@ -65,9 +65,9 @@ The 'callerId' attribute lets you specify the caller ID that will appear to the 
 For example, an inbound caller to your Freewili number has the caller ID 1-415-123-4567. You tell Freewili to execute a `<Dial>` verb to 1-858-987-6543 to handle the inbound call. The called party (1-858-987-6543) will see 1-415-123-4567 as the caller ID on the incoming call.
 
 You are allowed to change the phone number that the called party sees to one of the following:
-    * either the 'To' or 'From' number provided in Freewili's TwiML request to your app
-    * any incoming phone number you have added to Freewili
-    * any phone number you have validated with Freewili for use as an outgoing caller ID
+*  either the 'To' or 'From' number provided in Freewili's TwiML request to your app
+*  any incoming phone number you have added to Freewili
+*  any phone number you have validated with Freewili for use as an outgoing caller ID
 
 Nouns
 -----

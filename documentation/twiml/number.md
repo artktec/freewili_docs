@@ -1,6 +1,6 @@
 %twiml.Number
 
-TwiML `<Number>`
+TwiML <Number>
 =====================
 
 The `<Dial>` verb's `<Number>` noun specifies a phone number to dial. Using the noun's attributes you can specify particular behaviors that Freewili should apply when dialing the number.
