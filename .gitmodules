@@ -1,0 +1,6 @@
+[submodule "build/markdown"]
+	path = build/markdown
+	url = http://git.michelf.com/php-markdown
+[submodule "build/glip"]
+	path = build/glip
+	url = https://github.com/patrikf/glip.git
