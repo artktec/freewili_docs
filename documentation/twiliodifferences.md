@@ -36,5 +36,4 @@ Our namespace is ```http://api.freewili.com/ns/twiml``` You would use it as the 
 </Response>
 ~~~
 
-++++++++
-TwiML is a trademark of Twilio. Twilio is a registered trademark of Twilio Inc. All rights reserved. All rights Respected.
+> TwiML is a trademark of Twilio. Twilio is a registered trademark of Twilio Inc. All rights reserved. All rights Respected.

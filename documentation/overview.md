@@ -58,7 +58,7 @@ requesting Freewili to take some action, such as starting a phone call.
 URI in the Location response header.
 * `304 NOT MODIFIED` Your cache is good here. The data you should have cached is
 still up to date.
-`400 BAD REQUEST` Something is bad on your side. The data your provided somehow 
+* `400 BAD REQUEST` Something is bad on your side. The data your provided somehow 
 is not valid. Check the response body for more details.
 * `401 UNAUTHORIZED` Give Me your password please. You need to go through the
 HTTP BasicAuthorization dance for access.
@@ -74,7 +74,7 @@ API calls accept this request type.
 
 ### Possible DELETE Responses ###
 
-`204 OK` Your all good. The data was deleted.
+* `204 OK` Your all good. The data was deleted.
 * `401 UNAUTHORIZED` Give Me your password please. You need to go through the
 HTTP BasicAuthorization dance for access.
 * `404 NOT FOUND` Whatchyou talking about Willis? Eh, we don't know what data
@@ -106,3 +106,5 @@ REST API Rate Limiting
 The default rate limit for establishing phone calls to the Freewili REST API is 2 requests per second.
 
 The REST API looks at both the requesting user and the IP of the request to provide rate limiting.
+
+> TwiML is a trademark of Twilio. Twilio is a registered trademark of Twilio Inc. All rights reserved. All rights Respected.

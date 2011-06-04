@@ -1,13 +1,13 @@
 %twiml.Record
 
-TwiML <Record>
+TwiML `<Record>`
 =====================
 
-The <Record> verb records the caller's voice and returns to you the URL of a file containing the audio recording. You can optionally generate text transcriptions of recorded calls by setting the 'transcribe' attribute of the <Record> verb to 'true'.
+The `<Record>` verb records the caller's voice and returns to you the URL of a file containing the audio recording. You can optionally generate text transcriptions of recorded calls by setting the 'transcribe' attribute of the `<Record>` verb to 'true'.
 
 Verb Attributes
 ----------------
-The <Record> verb supports the following attributes that modify its behavior:
+The `<Record>` verb supports the following attributes that modify its behavior:
 
 Attribute Name      Allowed Values      Default Value
 --------------      --------------      -------------
@@ -24,9 +24,9 @@ transcribeCallback  relative or         none
 playBeep            true, false         true
 
 ### action ###
-The 'action' attribute takes an absolute or relative URL as a value. When recording is finished Freewili will make a GET or POST request to this URL including the parameters below. If no 'action' is provided, <Record> will default to requesting the current document's URL.
+The 'action' attribute takes an absolute or relative URL as a value. When recording is finished Freewili will make a GET or POST request to this URL including the parameters below. If no 'action' is provided, `<Record>` will default to requesting the current document's URL.
 
-After making this request, Freewili will continue the current call using the TwiML received in your response. Keep in mind that by default Freewili will re-request the current document's URL, which can lead to unwanted looping behavior if you're not careful. Any TwiML verbs occuring after a <Record> are unreachable.
+After making this request, Freewili will continue the current call using the TwiML received in your response. Keep in mind that by default Freewili will re-request the current document's URL, which can lead to unwanted looping behavior if you're not careful. Any TwiML verbs occuring after a `<Record>` are unreachable.
 
 There is one exception: if Freewili receives an empty recording, it will not make a request to the 'action' URL. The current call flow will continue with the next verb in the current TwiML document.
 
@@ -45,7 +45,7 @@ The 'method' attribute takes the value 'GET' or 'POST'. This tells Freewili whet
 The 'timeout' attribute tells Freewili to end the recording after a number of seconds of silence has passed. The default is 5 seconds.
 
 ### finishOnKey ###
-The 'finishOnKey' attribute lets you choose a set of digits that end the recording when entered. For example, if you set 'finishOnKey' to '#' and the caller presses '#', Freewili will immediately stop recording and submit 'RecordingUrl', 'RecordingDuration', and the '#' as parameters in a request to the 'action' URL. The allowed values are the digits 0-9, '#' and '*'. The default is '1234567890*#' (i.e. any key will end the recording). Unlike <Gather>, you may specify more than one character as a 'finishOnKey' value.
+The 'finishOnKey' attribute lets you choose a set of digits that end the recording when entered. For example, if you set 'finishOnKey' to '#' and the caller presses '#', Freewili will immediately stop recording and submit 'RecordingUrl', 'RecordingDuration', and the '#' as parameters in a request to the 'action' URL. The allowed values are the digits 0-9, '#' and '*'. The default is '1234567890*#' (i.e. any key will end the recording). Unlike `<Gather>`, you may specify more than one character as a 'finishOnKey' value.
 
 ### maxLength ###
 The 'maxLength' attribute lets you set the maximum length for the recording in seconds. If you set 'maxLength' to '30', the recording will automatically end after 30 seconds of recorded time has elapsed. This defaults to 3600 seconds (one hour) for a normal recording and 120 seconds (two minutes) for a transcribed recording.
@@ -84,7 +84,7 @@ Examples
 --------
 
 ### Example: _Simple Record_ ###
-Freewili will execute the <Record> verb causing the caller to hear a beep and the recording to start. If the caller is silent for more than 5 seconds, hits the '#' key, or the recording maxlength time is hit, Freewili will make an HTTP POST request to the default 'action' (the current document URL) with the parameters 'RecordingUrl' and 'RecordingDuration'.
+Freewili will execute the `<Record>` verb causing the caller to hear a beep and the recording to start. If the caller is silent for more than 5 seconds, hits the '#' key, or the recording maxlength time is hit, Freewili will make an HTTP POST request to the default 'action' (the current document URL) with the parameters 'RecordingUrl' and 'RecordingDuration'.
 
 ~~~{ .xml }
 <?xml version="1.0" encoding="UTF-8"?>
@@ -95,7 +95,7 @@ Freewili will execute the <Record> verb causing the caller to hear a beep and th
 ~~~
 
 ### Example: _Record a voicemail_ ###
-This is example shows a simple voicemail prompt. The caller is asked to leave a message at the beep. The <Record> verb beeps and begins recording up to 20 seconds of audio.
+This is example shows a simple voicemail prompt. The caller is asked to leave a message at the beep. The `<Record>` verb beeps and begins recording up to 20 seconds of audio.
 
 ~~~{ .xml }
 <?xml version="1.0" encoding="UTF-8"?>
@@ -115,11 +115,11 @@ This is example shows a simple voicemail prompt. The caller is asked to leave a 
 </Response>
 ~~~
 
-If the caller does not speak at all, the <Record> verb exits after 5 seconds of silence, falling through to the next verb in the document. In this case, it would fall through to the <Say> verb.
+If the caller does not speak at all, the `<Record>` verb exits after 5 seconds of silence, falling through to the next verb in the document. In this case, it would fall through to the `<Say>` verb.
 
-If the caller speaks for less that 20 seconds and is then silent for 5 seconds, Freewili makes a GET request to the 'action' URL. The <Say> verb is never reached.
+If the caller speaks for less that 20 seconds and is then silent for 5 seconds, Freewili makes a GET request to the 'action' URL. The `<Say>` verb is never reached.
 
-If the caller speaks for the full 20 seconds, Freewili makes a GET request to the 'action' URL. The <Say> verb is never reached.
+If the caller speaks for the full 20 seconds, Freewili makes a GET request to the 'action' URL. The `<Say>` verb is never reached.
 
 ### Example: _Transcribe a recording_ ###
 Freewili will record the caller. When the recording is complete, Freewili will transcribe the recording and make an HTTP POST request to the 'transcribeCallback' URL with a parameter containing a transcription of the recording.
@@ -135,3 +135,5 @@ Freewili will record the caller. When the recording is complete, Freewili will t
 Hints and Advanced Uses
 ------------------------
 Freewili will trim leading and trailing silence from your audio files. This may cause the duration of the files to be slightly smaller than the time a caller spends recording them.
+
+> TwiML is a trademark of Twilio. Twilio is a registered trademark of Twilio Inc. All rights reserved. All rights Respected.

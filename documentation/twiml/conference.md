@@ -1,9 +1,9 @@
 %twiml.Conference
 
-TwiML <Conference>
+TwiML `<Conference>`
 ==================
 
-The <Dial> verb's <Conference> noun allows you to connect to a conference room. Much like how the <Number> noun allows you to connect to another phone number, the <Conference> noun allows you to connect to a named conference room and talk with the other callers who have also connected to that room.
+The `<Dial>` verb's `<Conference>` noun allows you to connect to a conference room. Much like how the `<Number>` noun allows you to connect to another phone number, the `<Conference>` noun allows you to connect to a named conference room and talk with the other callers who have also connected to that room.
 
 The name of the room is up to you and is namespaced to your account. This means that any caller who joins 'room1234' via your account will end up in the same conference room, but callers connecting through different accounts would not. The maximum number of participants in a single Freewili conference room is 10.
 
@@ -17,7 +17,7 @@ You can configure or disable each of these features based on your particular nee
 Noun Attributes
 ---------------
 
-The <Conference> noun supports the following attributes that modify its behavior:
+The `<Conference>` noun supports the following attributes that modify its behavior:
 
 Attribute Name      Allowed Values      Default Value
 --------------      --------------      -------------
@@ -44,7 +44,7 @@ This attribute tells a conference to start when this participant joins the confe
 If a participant has this attribute set to 'true', then when that participant leaves, the conference ends and all other participants drop out. This defaults to 'false'. This is useful for implementing moderated conferences that bridge two calls and allow either call leg to continue executing TwiML if the other hangs up.
 
 ### waitUrl ###
-The 'waitUrl' attribute lets you specify a URL for music that plays before the conference has started. The URL may be an MP3, a WAV or a TwiML document that uses <Play> or <Say> for content. This defaults to a selection of Creative Commons licensed background music, but you can replace it with your own music and messages. If the 'waitUrl' responds with TwiML, Freewili will only process <Play>, <Say>, and <Redirect> verbs. <Record>, <Dial>, and <Gather> verbs are not allowed. If you do not wish anything to play while waiting for the conference to start, specify the empty string (set 'waitUrl' to '').
+The 'waitUrl' attribute lets you specify a URL for music that plays before the conference has started. The URL may be an MP3, a WAV or a TwiML document that uses `<Play>` or `<Say>` for content. This defaults to a selection of Creative Commons licensed background music, but you can replace it with your own music and messages. If the 'waitUrl' responds with TwiML, Freewili will only process `<Play>`, `<Say>`, and `<Redirect>` verbs. `<Record>`, `<Dial>`, and `<Gather>` verbs are not allowed. If you do not wish anything to play while waiting for the conference to start, specify the empty string (set 'waitUrl' to '').
 
 If no 'waitUrl' is specified, Freewili will use Twilio's public AWS S3 Bucket for audio files. The default 'waitUrl' is:
 
@@ -66,6 +66,14 @@ This attribute indicates which HTTP method to use when requesting 'waitUrl'. It 
 
 ### maxParticipants ###
 This attribute indicates the maximum number of participants you want to allow within a named conference room. The default maximum number of participants is 40. The value must be a positive integer less than or equal to 40.
+
+Nesting Rules
+-------------
+Not Supported.
+
+Nested Rules
+------------
+Not Supported.
 
 Examples
 --------
@@ -104,7 +112,7 @@ Each person will hear hold music while they wait. When the "moderator" or confer
 </Response>
 ~~~
 
-Also note that since the moderator has "endConferenceOnExit='true'" set, then when the moderator hangs up, the conference will end and each participant's <Dial> will complete.
+Also note that since the moderator has "endConferenceOnExit='true'" set, then when the moderator hangs up, the conference will end and each participant's `<Dial>` will complete.
 
 ### Example: _Join a Conference Muted_ ###
 This code allows forces participants to join the conference room muted. They can hear what unmuted participants are saying but no one can hear them. The muted attribute can be enabled or disabled in realtime via the REST API.
@@ -168,3 +176,5 @@ Because Conference is an element of Dial, you can still use all the Dial attribu
   </Dial>
 </Response>
 ~~~
+
+> TwiML is a trademark of Twilio. Twilio is a registered trademark of Twilio Inc. All rights reserved. All rights Respected.

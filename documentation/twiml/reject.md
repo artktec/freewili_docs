@@ -1,15 +1,15 @@
-TwiML <Reject>
+TwiML `<Reject>`
 ======================
 
-The <Reject> verb rejects an incoming call to your Freewili number without possiably billing your gateway. This is very useful for blocking unwanted calls.
+The `<Reject>` verb rejects an incoming call to your Freewili number without possiably billing your gateway. This is very useful for blocking unwanted calls.
 
-If the first verb in a TwiML document is <Reject>, Freewili will not pick up the call. The call ends with a status of 'busy' or 'no-answer', depending on the verb's 'reason' attribute. Any verbs after <Reject> are unreachable and ignored.
+If the first verb in a TwiML document is `<Reject>`, Freewili will not pick up the call. The call ends with a status of 'busy' or 'no-answer', depending on the verb's 'reason' attribute. Any verbs after `<Reject>` are unreachable and ignored.
 
-Note that using <Reject> as the first verb in your response is the only way to prevent Freewili from answering a call. Any other response will result in an answered call and your account will be billed.
+Note that using `<Reject>` as the first verb in your response is the only way to prevent Freewili from answering a call. Any other response will result in an answered call and your account will be billed.
 
 Verb Attributes
 ---------------
-The <Reject> verb supports the following attributes that modify its behavior:
+The `<Reject>` verb supports the following attributes that modify its behavior:
 
 Attribute Name      Allowed Values      Default Value
 --------------      --------------      -------------
@@ -46,3 +46,5 @@ Examples
     <Reject reason="busy" />
 </Response>
 ~~~
+
+> TwiML is a trademark of Twilio. Twilio is a registered trademark of Twilio Inc. All rights reserved. All rights Respected.

@@ -1,14 +1,14 @@
 %twiml.Play
 
-TwiML <Play>
+TwiML `<Play>`
 ===================
 
-The <Play> verb plays an audio file back to the caller. Freewili retrieves the file from a URL that you provide.
+The `<Play>` verb plays an audio file back to the caller. Freewili retrieves the file from a URL that you provide.
 
 Verb Attributes
 ---------------
 
-The <Play> verb supports the following attributes that modify its behavior:
+The `<Play>` verb supports the following attributes that modify its behavior:
 
 Attribute Name      Allowed Values      Default Value
 --------------      --------------      -------------
@@ -17,20 +17,20 @@ loop                integer >= 0        1
 ### loop ###
 The 'loop' attribute specifies how many times the audio file is played. The default behavior is to play the audio once. 
 
-Specifying '0' will cause the the <Play> verb to loop until the call is hung up.
+Specifying '0' will cause the the `<Play>` verb to loop until the call is hung up.
 
 Nouns
 -----
 
 The "noun" of a TwiML verb is the stuff nested within the verb that's not a verb itself; it's the stuff the verb acts upon. 
 
-These are the nouns for <Play>:
+These are the nouns for `<Play>`:
 
 Noun                Description
 ----                ------------
 plain text          The URL of an audio file that Freewili will retrieve and play to the caller.
 
-Freewili supports the following audio MIME types for audio files retrieved by the <Play> verb:
+Freewili supports the following audio MIME types for audio files retrieved by the `<Play>` verb:
 
 MIME type           Description
 ---------           -----------
@@ -47,9 +47,11 @@ audio/ulaw          μ-law audio format
 
 Nesting Rules
 --------------
+`<Gather>`
 
-
-<Gather>
+Nested Rules
+------------
+Not Supported.
 
 Examples
 --------
@@ -75,3 +77,5 @@ Freewili obeys standard HTTP caching headers. If you change a file already cache
 Audio played over the telephone network is transcoded to a format the telephone network understands. Regardless of the quality of the file you provide us, we will transcode so it plays correctly. This may result in lower quality because the telephone number does not support high bitrate audio.
 
 High bitrate, lossy encoded files, such as 128kbps mp3 files, will take longer to transcode and potentially sound worse than files that are in lossless 8kbps formats. This is due to the inevitable degradation that occurs when converting from lossy compressed formats and the processing involved in converting from higher bit rates to low bit rates.
+
+> TwiML is a trademark of Twilio. Twilio is a registered trademark of Twilio Inc. All rights reserved. All rights Respected.

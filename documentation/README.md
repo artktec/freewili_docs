@@ -1,0 +1,1 @@
+This is the main documentation for Freewili. This is the basis for dosdok a new 2nd tier documentation code. What does this mean. It means dosdok will take existing documentation and create a consistent look-and-feel and commenting system for it.

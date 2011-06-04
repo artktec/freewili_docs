@@ -15,3 +15,5 @@ Add all of the SIP gateway data to your Freewili account. When making calls we w
 Hooking up A Number
 -------------------
 Having a Number call into Freewili is a process that needs to happen with your DID provider. Just add SIP forwarding to the phone number of your choice. Forward the number to sip.freewili.com or the IP address 75.101.139.0
+
+> TwiML is a trademark of Twilio. Twilio is a registered trademark of Twilio Inc. All rights reserved. All rights Respected.
