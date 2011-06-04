@@ -28,11 +28,13 @@ Because Freewili was started to add some additional functionality to Twilio, We 
 Namespace
 ----------
 
-Our namespace is ```http://api.freewili.com/ns/twiml``` You would use it as the following example:
+Our namespace is `http://api.freewili.com/ns/twiml` You would use it as the following example:
 
 ~~~{ .xml }
 <Response xmlns:fw="http://api.freewili.com/ns/twiml">
-	<Dial fw:Sip="njones@njones.com" />
+	<Dial>
+		<fw:Sip>njones@example.com</fw:Sip>
+	</Dial>
 </Response>
 ~~~
 
