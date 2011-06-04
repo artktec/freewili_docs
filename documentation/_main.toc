@@ -1,0 +1,11 @@
+headlines :
+    howitworks : How it Works
+    overview : Freewili Overview
+    twiliodifferences : Freewili Differences from Twilio
+    
+sections:
+	description : Main description
+    GET : GET (HTTP Request)
+    PUT : PUT (HTTP Request)
+    POST : POST (HTTP Request)
+    DELETE : DELETE (HTTP Request)

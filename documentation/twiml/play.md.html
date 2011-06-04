@@ -1,0 +1,77 @@
+%twiml.Play
+
+TwiML <Play>
+===================
+
+The <Play> verb plays an audio file back to the caller. Freewili retrieves the file from a URL that you provide.
+
+Verb Attributes
+---------------
+
+The <Play> verb supports the following attributes that modify its behavior:
+
+Attribute Name      Allowed Values      Default Value
+--------------      --------------      -------------
+loop                integer >= 0        1
+
+### loop ###
+The 'loop' attribute specifies how many times the audio file is played. The default behavior is to play the audio once. 
+
+Specifying '0' will cause the the <Play> verb to loop until the call is hung up.
+
+Nouns
+-----
+
+The "noun" of a TwiML verb is the stuff nested within the verb that's not a verb itself; it's the stuff the verb acts upon. 
+
+These are the nouns for <Play>:
+
+Noun                Description
+----                ------------
+plain text          The URL of an audio file that Freewili will retrieve and play to the caller.
+
+Freewili supports the following audio MIME types for audio files retrieved by the <Play> verb:
+
+MIME type           Description
+---------           -----------
+audio/mpeg          mpeg layer 3 audio
+audio/wav           wav format audio
+audio/wave          wav format audio
+audio/x-wav         wav format audio
+audio/aiff          audio interchange file format
+audio/x-aifc        audio interchange file format
+audio/x-aiff        audio interchange file format
+audio/x-gsm         GSM audio format
+audio/gsm           GSM audio format
+audio/ulaw          μ-law audio format
+
+Nesting Rules
+--------------
+
+
+<Gather>
+
+Examples
+--------
+
+### Example ###
+
+This TwiML document tells Freewili to download the cowbell.mp3 file and play the audio to the caller.
+~~~{ .xml }
+<?xml version="1.0" encoding="UTF-8" ?>
+<Response>
+    <Play>http://foo.com/cowbell.mp3</Play>
+</Response>
+~~~
+  
+Hints and Advanced Uses
+-----------------------
+Freewili will attempt to cache the audio file the first time it is played.
+
+This means the first attempt may be slow to play due to the time spent downloading the file from your remote server. Freewili may play a processing sound while the file is being downloaded.
+
+Freewili obeys standard HTTP caching headers. If you change a file already cached by Freewili, make sure your web server is sending the proper headers to inform us that the contents of the file have changed.
+
+Audio played over the telephone network is transcoded to a format the telephone network understands. Regardless of the quality of the file you provide us, we will transcode so it plays correctly. This may result in lower quality because the telephone number does not support high bitrate audio.
+
+High bitrate, lossy encoded files, such as 128kbps mp3 files, will take longer to transcode and potentially sound worse than files that are in lossless 8kbps formats. This is due to the inevitable degradation that occurs when converting from lossy compressed formats and the processing involved in converting from higher bit rates to low bit rates.
