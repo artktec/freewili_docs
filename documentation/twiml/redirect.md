@@ -1,6 +1,6 @@
 %twiml.Redirect
 
-TwiML Voice: <Redirect>
+TwiML \<Redirect>
 =======================
 
 The `<Redirect>` verb transfers control of a call to the TwiML at a different URL. All verbs after `<Redirect>` are unreachable and ignored.

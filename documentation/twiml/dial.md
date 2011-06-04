@@ -81,10 +81,10 @@ plain text         | A string representing a valid phone number to call.
 `<Number>`	       | A nested XML element that describes a phone number with more complex attributes.
 `<Conference>`	   | A nested XML element that describes a conference allowing two or more parties to talk.
 
-### `<Number>` Noun ###
+### \<Number> Noun ###
 The `<Number>` noun allows you to `<Dial>` another number while specifying additional behavior pertaining to that number. Simultaneous dialing is also possible using multiple `<Number>` nouns. See the documentation on the `<Number>` noun for a detailed walkthrough of how to use it.
 
-### `<Conference>` Noun ###
+### \<Conference> Noun ###
 The `<Conference>` noun allows you to `<Dial>` into a conference room, rather than `<Dial>` another number. See the documentation on the `<Conference>` noun for a detailed walkthrough of how to use Freewili's conferencing functionality.
 
 

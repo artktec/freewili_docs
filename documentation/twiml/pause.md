@@ -1,6 +1,6 @@
 %twiml.Pause
 
-TwiML <Pause>
+TwiML \<Pause>
 =====================
 
 The `<Pause>` verb waits silently for a specific number of seconds. If `<Pause>` is the first verb in a TwiML document, Freewili will wait the specified number of seconds before picking up the call.

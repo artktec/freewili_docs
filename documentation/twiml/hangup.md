@@ -1,6 +1,6 @@
 %twiml.Hangup
 
-TwiML <Hangup>
+TwiML \<Hangup>
 ==============
 
 The `<Hangup>` verb ends a call. If used as the first verb in a Freewili response it does not prevent Freewili from answering the call and possibly billing your gateway provider. The only way to not answer a call and prevent any billing is to use the `<Reject>` verb.

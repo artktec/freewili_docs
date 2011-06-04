@@ -1,6 +1,6 @@
 %twiml.Conference
 
-TwiML <Conference>
+TwiML \<Conference>
 ==================
 
 The `<Dial>` verb's `<Conference>` noun allows you to connect to a conference room. Much like how the `<Number>` noun allows you to connect to another phone number, the `<Conference>` noun allows you to connect to a named conference room and talk with the other callers who have also connected to that room.

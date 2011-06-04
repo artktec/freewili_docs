@@ -1,6 +1,6 @@
 %twiml.Reject
 
-TwiML <Reject>
+TwiML \<Reject>
 ======================
 
 The `<Reject>` verb rejects an incoming call to your Freewili number without possiably billing your gateway. This is very useful for blocking unwanted calls.

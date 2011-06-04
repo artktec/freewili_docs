@@ -1,6 +1,6 @@
 %twiml.Gather
 
-TwiML <Gather>
+TwiML \<Gather>
 =====================
 
 The `<Gather>` verb collects digits that a caller enters into his or her telephone keypad. When the caller is done entering data, Freewili submits that data to the provided 'action' URL in an HTTP GET or POST request, just like a web browser submits data from an HTML form.
@@ -32,6 +32,7 @@ If the 'timeout' is reached before the caller enters any digits, or if the calle
 #### Request Parameters ####
 
 Freewili will pass the following parameters in addition to the standard TwiML Voice request parameters with its request to the 'action' URL:
+
 Parameter          | Description
 ------------------ | -----------
 Digits             | The digits the caller pressed, excluding the finishOnKey digit if used.
