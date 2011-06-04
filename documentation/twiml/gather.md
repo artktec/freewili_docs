@@ -13,14 +13,14 @@ Verb Attributes
 ---------------
 The `<Gather>` verb supports the following attributes that modify its behavior:
 
-Attribute Name      Allowed Values      Default Value
---------------      --------------      -------------
-action              relative or         current document URL
-                    absolute URL              
-method              GET, POST           POST
-timeout             positive integer    5 seconds
-finishOnKey         any digit, \#, \*     \#
-numDigits           integer >= 1        unlimited
+Attribute Name     | Allowed Values     | Default Value
+------------------ | ------------------ | -------------
+action             | relative or        | current document URL
+                   | absolute URL       |       
+method             | GET, POST          | POST
+timeout            | positive integer   | 5 seconds
+finishOnKey        | any digit, \#, \*  |   \#
+numDigits          | integer >= 1       | unlimited
 
 ### action ###
 The 'action' attribute takes an absolute or relative URL as a value. When the caller has finished entering digits Freewili will make a GET or POST request to this URL including the parameters below. If no 'action' is provided, Freewili will by default make a POST request to the current document's URL.
@@ -32,9 +32,9 @@ If the 'timeout' is reached before the caller enters any digits, or if the calle
 #### Request Parameters ####
 
 Freewili will pass the following parameters in addition to the standard TwiML Voice request parameters with its request to the 'action' URL:
-Parameter           Description
----------           -----------
-Digits              The digits the caller pressed, excluding the finishOnKey digit if used.
+Parameter          | Description
+------------------ | -----------
+Digits             | The digits the caller pressed, excluding the finishOnKey digit if used.
 
 ### method ###
 The 'method' attribute takes the value 'GET' or 'POST'. This tells Freewili whether to request the 'action' URL via HTTP GET or POST. This attribute is modeled after the HTML form 'method' attribute. 'POST' is the default value.

@@ -19,17 +19,17 @@ Noun Attributes
 
 The `<Conference>` noun supports the following attributes that modify its behavior:
 
-Attribute Name      Allowed Values      Default Value
---------------      --------------      -------------
-muted               true, false         false
-beep                true, false         true
-startConferenceOnEnter  true, false     true
-endConferenceOnExit true, false         false
-waitUrl             TwiML url, empty    default Twilio hold music 
-                    string
-waitMethod          GET or POST         POST
-maxParticipants     positive integer    10 
-                    <= 10
+Attribute Name         | Allowed Values     | Default Value
+---------------------- | --------------     | -------------
+muted                  | true, false        | false
+beep                   | true, false        | true
+startConferenceOnEnter | true, false        | true
+endConferenceOnExit    | true, false        | false
+waitUrl                | TwiML url, empty   | default Twilio hold music 
+                       | string             |
+waitMethod             | GET or POST        | POST
+maxParticipants        | positive integer   | 10 
+                       |  <= 10             |
 
 ### muted ###
 The 'muted' attribute lets you specify whether a participant can speak on the conference. If this attribute is set to 'true', the participant will only be able to listen to people on the conference. This attribute defaults to 'false'.
@@ -52,14 +52,14 @@ http://twimlets.com/holdmusic?Bucket=com.twilio.music.classical
 
 This URL points at S3 bucket com.twilio.music.classical, containing a selection of nice Creative Commons classical music. Here's a list of S3 buckets we've assembed with other genres of music for you to choose from:
 
-Bucket                        Twimlet URL
-------                        -----------
-com.twilio.music.classical    http://twimlets.com/holdmusic?Bucket=com.twilio.music.classical
-com.twilio.music.ambient      http://twimlets.com/holdmusic?Bucket=com.twilio.music.ambient
-com.twilio.music.electronica  http://twimlets.com/holdmusic?Bucket=com.twilio.music.electronica
-com.twilio.music.guitars      http://twimlets.com/holdmusic?Bucket=com.twilio.music.guitars
-com.twilio.music.rock         http://twimlets.com/holdmusic?Bucket=com.twilio.music.rock
-com.twilio.music.soft-rock    http://twimlets.com/holdmusic?Bucket=com.twilio.music.soft-rock
+Bucket                       | Twimlet URL
+---------------------------- | -----------
+com.twilio.music.classical   | http://twimlets.com/holdmusic?Bucket=com.twilio.music.classical
+com.twilio.music.ambient     | http://twimlets.com/holdmusic?Bucket=com.twilio.music.ambient
+com.twilio.music.electronica | http://twimlets.com/holdmusic?Bucket=com.twilio.music.electronica
+com.twilio.music.guitars     | http://twimlets.com/holdmusic?Bucket=com.twilio.music.guitars
+com.twilio.music.rock        | http://twimlets.com/holdmusic?Bucket=com.twilio.music.rock
+com.twilio.music.soft-rock   | http://twimlets.com/holdmusic?Bucket=com.twilio.music.soft-rock
 
 ### waitMethod ###
 This attribute indicates which HTTP method to use when requesting 'waitUrl'. It defaults to 'POST'. Be sure to use 'GET' if you are directly requesting static audio files such as WAV or MP3 files so that Freewili properly caches the files.

@@ -10,15 +10,16 @@ Verb Attributes
 ---------------
 The `<Dial>` verb supports the following attributes that modify its behavior:
 
-Attribute           Allowed Values	     Default Value
-action              relative or          no default action for Dial
-                    absolute URL
-method              GET, POST            POST
-timeout             positive integer     30 seconds
-hangupOnStar        true, false          false
-timeLimit           positive integer     14400 seconds (4 hours) 
-                    (seconds)
-callerId            valid phone number   Caller's callerId
+Attribute          | Allowed Values	     | Default Value
+------------------ | ------------------- | --------------
+action             | relative or         | no default action for Dial
+                   | absolute URL        |
+method             | GET, POST           | POST
+timeout            | positive integer    | 30 seconds
+hangupOnStar       | true, false         | false
+timeLimit          | positive integer    | 14400 seconds (4 hours) 
+                   | (seconds)           |
+callerId           | valid phone number  | Caller's callerId
 
 ### action ###
 The 'action' attribute takes a URL as an argument. When the dialed call ends, Freewili will make a GET or POST request to this URL including the parameters below.
@@ -31,21 +32,22 @@ If no 'action' is provided, `<Dial>` will finish and Freewili will move on to th
 
 Freewili will pass the following parameters in addition to the standard TwiML Voice request parameters with its request to the 'action' URL:
 
-Parameter           Description
----------           -----------
-DialCallSid         The call sid of the new call leg.
-DialCallStatus      The outcome of the `<Dial>` attempt. See the DialCallStatus section below for details.
-DialCallDuration    The duration in seconds of the dialed call.
+Parameter          | Description
+---------          | -----------
+DialCallSid        | The call sid of the new call leg.
+DialCallStatus     | The outcome of the `<Dial>` attempt. See the DialCallStatus section below for details.
+DialCallDuration   | The duration in seconds of the dialed call.
 
 #### DialCallStatus Values ####
 
-Value               Description
------               ------------
-completed           The called party answered the call and was connected to the caller.
-busy                Freewili received a busy signal when trying to connect to the called party.
-no-answer           The called party did not pick up before the timeout period passed.
-failed              Freewili was unable to route to the given phone number. This is frequently caused by dialing a properly formated but non-existent phone number.
-canceled           The call was canceled via the REST API before it was answered.
+Value              | Description
+------------------ | ------------
+completed          | The called party answered the call and was connected to the caller.
+busy               | Freewili received a busy signal when trying to connect to the called party.
+no-answer          | The called party did not pick up before the timeout period passed.
+failed             | Freewili was unable to route to the given phone number. This is frequently caused by dialing a 
+                   | properly formated but non-existent phone number.
+canceled           | The call was canceled via the REST API before it was answered.
 
 ### method ###
 The 'method' attribute takes the value 'GET' or 'POST'. This tells Freewili whether to request the 'action' URL via HTTP GET or POST. This attribute is modeled after the HTML form 'method' attribute. 'POST' is the default value.
@@ -73,11 +75,11 @@ Nouns
 -----
 The "noun" of a TwiML verb is the stuff nested within the verb that's not a verb itself; it's the stuff the verb acts upon. These are the nouns for `<Dial>`:
 
-Noun                Description
-----                -----------
-plain text          A string representing a valid phone number to call.
-`<Number>`	        A nested XML element that describes a phone number with more complex attributes.
-`<Conference>`	    A nested XML element that describes a conference allowing two or more parties to talk.
+Noun               | Description
+------------------ | -----------
+plain text         | A string representing a valid phone number to call.
+`<Number>`	       | A nested XML element that describes a phone number with more complex attributes.
+`<Conference>`	   | A nested XML element that describes a conference allowing two or more parties to talk.
 
 ### `<Number>` Noun ###
 The `<Number>` noun allows you to `<Dial>` another number while specifying additional behavior pertaining to that number. Simultaneous dialing is also possible using multiple `<Number>` nouns. See the documentation on the `<Number>` noun for a detailed walkthrough of how to use it.

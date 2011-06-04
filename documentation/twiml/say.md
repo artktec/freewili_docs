@@ -9,11 +9,11 @@ Verb Attributes
 ---------------
 The `<Say>` verb supports the following attributes that modify its behavior:
 
-Attribute Name	     Allowed Values	     Default Value
-----------------     --------------      --------------
-voice                man, woman          man
-language             en, es, fr, de      en
-loop                 integer >= 0        1
+Attribute Name | Allowed Values | Default Value
+-------------- | -------------- | --------------
+voice          | man, woman     | man
+language       | en, es, fr, de | en
+loop           | integer >= 0   | 1
 
 ### voice ###
 The 'voice' attribute allows you to choose a male or female voice to read text back. The default value is 'man'.
@@ -26,9 +26,9 @@ The 'loop' attribute specifies how many times you'd like the text repeated. The 
 
 Nouns
 
-Noun                Description
--------             ------------
-`<plain text>`        The text Freewili will read to the caller. Limited to 4KB.
+Noun           | Description
+-------------- | ------------
+`<plain text>` | The text Freewili will read to the caller. Limited to 4KB.
 
 Nesting Rules
 --------------

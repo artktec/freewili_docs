@@ -9,9 +9,9 @@ Verb Attributes
 ---------------
 The `<Redirect>` verb supports the following attributes that modify its behavior:
 
-Attribute Name      Allowed Values      Default Value
----------------     --------------      -------------
-method              GET, POST           POST
+Attribute Name  | Allowed Values | Default Value
+--------------- | -------------- | -------------
+method          | GET, POST      | POST
 
 ### method ###
 The 'method' attribute takes the value 'GET' or 'POST'. This tells Freewili whether to request the `<Redirect>` URL via HTTP GET or POST. 'POST' is the default.
@@ -20,9 +20,9 @@ Nouns
 -----
 The "noun" of a TwiML verb is the stuff nested within the verb that's not a verb itself; it's the stuff the verb acts upon. These are the nouns for `<Redirect>`:
 
-Noun                TwiML Interpretation
-------              --------------------
-plain text          An absolute or relative URL for a different TwiML document.
+Noun       | TwiML Interpretation
+---------- | --------------------
+plain text | An absolute or relative URL for a different TwiML document.
 
 Nesting Rules
 --------------

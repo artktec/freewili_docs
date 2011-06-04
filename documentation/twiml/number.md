@@ -10,10 +10,10 @@ Noun Attributes
 ---------------
 The `<Number>` noun supports the following attributes that modify its behavior:
 
-Attribute Name      Allowed Values      Default Value
---------------      --------------      -------------
-sendDigits          any digits          none
-url                 any url             none
+Attribute Name     | Allowed Values     | Default Value
+------------------ | ------------------ | -------------
+sendDigits         | any digits         | none
+url                | any url            | none
 
 ### sendDigits ###
 The 'sendDigits' attribute tells Freewili to play DTMF tones when the call is answered. This is useful when dialing a phone number and an extension. Freewili will dial the number, and when the automated system picks up, send the DTMF tones to connect to the extension.

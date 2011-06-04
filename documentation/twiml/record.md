@@ -9,19 +9,19 @@ Verb Attributes
 ----------------
 The `<Record>` verb supports the following attributes that modify its behavior:
 
-Attribute Name      Allowed Values      Default Value
---------------      --------------      -------------
-action              relative or         current document URL
-                    absolute URL
-method              GET, POST           POST
-timeout             positive integer    5
-finishOnKey         any digit, \#, \*     1234567890\*\#
-maxLength           integer greater     3600 (1 hour) 
-                    than 1
-transcribe          true, false         false
-transcribeCallback  relative or         none
-                    absolute URL
-playBeep            true, false         true
+Attribute Name     | Allowed Values     | Default Value
+------------------ | ------------------ | -------------
+action             | relative or        | current document URL
+                   | absolute URL       |
+method             | GET, POST          | POST
+timeout            | positive integer   | 5
+finishOnKey        | any digit, \#, \*  |   1234567890\*\#
+maxLength          | integer greater    | 3600 (1 hour) 
+                   | than 1             | 
+transcribe         | true, false        | false
+transcribeCallback | relative or        | none
+                   | absolute URL       |
+playBeep           | true, false        | true
 
 ### action ###
 The 'action' attribute takes an absolute or relative URL as a value. When recording is finished Freewili will make a GET or POST request to this URL including the parameters below. If no 'action' is provided, `<Record>` will default to requesting the current document's URL.
@@ -32,11 +32,11 @@ There is one exception: if Freewili receives an empty recording, it will not mak
 
 #### Request Parameters ####
 Freewili will pass the following parameters in addition to the standard TwiML Voice request parameters with its request to the 'action' URL:
-Parameter           Description
----------           -----------
-RecordingUrl        the URL of the recorded audio
-RecordingDuration   the time duration of the recorded audio
-Digits              the key (if any) pressed to end the recording or 'hangup' if the caller hung up
+Parameter          | Description
+------------------ | -----------
+RecordingUrl       | The URL of the recorded audio
+RecordingDuration  | The time duration of the recorded audio
+Digits             | The key (if any) pressed to end the recording or 'hangup' if the caller hung up
 
 ### method ###
 The 'method' attribute takes the value 'GET' or 'POST'. This tells Freewili whether to request the 'action' URL via HTTP GET or POST. This attribute is modeled after the HTML form 'method' attribute. 'POST' is the default value.
@@ -62,12 +62,12 @@ The 'transcribeCallback' attribute is used in conjunction with the 'transcribe' 
 Request Parameters
 Freewili will pass the following parameters in addition to the standard TwiML Voice request parameters with its request to the 'transcribeCallback' URL:
 
-Parameter           Description
----------           -----------
-TranscriptionText   Contains the text of the transcription.
-TranscriptionStatus The status of the transcription attempt: either 'completed' or 'failed'.
-TranscriptionUrl    The URL for the transcription's REST API resource.
-RecordingUrl        The URL for the transcription's source recording resource.
+Parameter           | Description
+------------------  | -----------
+TranscriptionText   | Contains the text of the transcription.
+TranscriptionStatus | The status of the transcription attempt: either 'completed' or 'failed'.
+TranscriptionUrl    | The URL for the transcription's REST API resource.
+RecordingUrl        | The URL for the transcription's source recording resource.
 
 ### playBeep ###
 The 'playBeep' attribute allows you to toggle between playing a sound before the start of a recording. If you set the value to 'false', no beep sound will be played.

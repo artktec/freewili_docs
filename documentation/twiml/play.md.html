@@ -10,9 +10,9 @@ Verb Attributes
 
 The `<Play>` verb supports the following attributes that modify its behavior:
 
-Attribute Name      Allowed Values      Default Value
---------------      --------------      -------------
-loop                integer >= 0        1
+Attribute Name | Allowed Values     | Default Value
+-------------- | ------------------ | -------------
+loop           | integer >= 0       | 1
 
 ### loop ###
 The 'loop' attribute specifies how many times the audio file is played. The default behavior is to play the audio once. 
@@ -26,24 +26,24 @@ The "noun" of a TwiML verb is the stuff nested within the verb that's not a verb
 
 These are the nouns for `<Play>`:
 
-Noun                Description
-----                ------------
-plain text          The URL of an audio file that Freewili will retrieve and play to the caller.
+Noun              | Description
+----------------- | ------------
+plain text        | The URL of an audio file that Freewili will retrieve and play to the caller.
 
 Freewili supports the following audio MIME types for audio files retrieved by the `<Play>` verb:
 
-MIME type           Description
----------           -----------
-audio/mpeg          mpeg layer 3 audio
-audio/wav           wav format audio
-audio/wave          wav format audio
-audio/x-wav         wav format audio
-audio/aiff          audio interchange file format
-audio/x-aifc        audio interchange file format
-audio/x-aiff        audio interchange file format
-audio/x-gsm         GSM audio format
-audio/gsm           GSM audio format
-audio/ulaw          μ-law audio format
+MIME type         | Description
+----------------- | -----------
+audio/mpeg        | mpeg layer 3 audio
+audio/wav         | wav format audio
+audio/wave        | wav format audio
+audio/x-wav       | wav format audio
+audio/aiff        | audio interchange file format
+audio/x-aifc      | audio interchange file format
+audio/x-aiff      | audio interchange file format
+audio/x-gsm       | GSM audio format
+audio/gsm         | GSM audio format
+audio/ulaw        | μ-law audio format
 
 Nesting Rules
 --------------

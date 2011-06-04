@@ -13,9 +13,9 @@ Verb Attributes
 ---------------
 The `<Reject>` verb supports the following attributes that modify its behavior:
 
-Attribute Name      Allowed Values      Default Value
---------------      --------------      -------------
-reason              rejected, busy      rejected
+Attribute Name | Allowed Values  | Default Value
+-------------- | --------------  | -------------
+reason         | rejected, busy  | rejected
 
 ### reason ###
 The reason attribute takes the values "rejected" and "busy." This tells Freewili what message to play when rejecting a call. Selecting "busy" will play a busy signal to the caller, while selecting "rejected" will play a standard not-in-service response. If this attribute's value isn't set, the default is "rejected."
