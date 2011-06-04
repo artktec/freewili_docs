@@ -1,6 +1,6 @@
 %twiml.Dial
 
-TwiML <Dial>
+TwiML \<Dial>
 ===================
 
 The `<Dial>` verb connects the current caller to an another phone. If the called party picks up, the two parties are connected and can communicate until one hangs up. If the called party does not pick up, if a busy signal is received, or if the number doesn't exist, the dial verb will finish.
