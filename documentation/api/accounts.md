@@ -9,21 +9,21 @@ Subaccounts.
 
 The Account data is represented by the following properties:
 
-NodeName            Description
--------------       ---------------
-Sid	                A 34 character string that uniquely identifies this account.
-DateCreated	        The date that this account was created, in GMT in 
-                    RFC 2822 format
-DateUpdated	        The date that this account was last updated, in GMT in
-                    RFC 2822 format.
-FriendlyName        A human readable description of this account, up to 64 characters
-                    long. By default the FriendlyName is your email address.
-Status	            The status of this account. Usually active, but can be suspended
-                    if you've been bad, or closed if you've been horrible.
-AuthToken	        The authorization token for this account. This token should be
-                    kept a secret, so no sharing.
-Uri	                The URI for this resource, relative to https://api.freewili.com.
-SubresourceUris     The list of subresources under this account.
+NodeName        | Description
+---------------   ---------------
+Sid	            | A 34 character string that uniquely identifies this account.
+DateCreated	    | The date that this account was created, in GMT in 
+                | RFC 2822 format
+DateUpdated	    | The date that this account was last updated, in GMT in
+                | RFC 2822 format.
+FriendlyName    | A human readable description of this account, up to 64 characters
+                | long. By default the FriendlyName is your email address.
+Status	        | The status of this account. Usually active, but can be suspended
+                | if you've been bad, or closed if you've been horrible.
+AuthToken	    | The authorization token for this account. This token should be
+                | kept a secret, so no sharing.
+Uri	            | The URI for this resource, relative to https://api.freewili.com.
+SubresourceUris | The list of subresources under this account.
 
 Accessing all accounts
 =========================================
@@ -35,12 +35,12 @@ Retrieve a list of all the Accounts belonging to the master account.
 You can filter the results of this listing by using the following
 parameters as a query
 
-Parameter           Description
-------------        --------------
-FriendlyName        Only return the Account resources with friendly names that
-                    exactly match this name.
-Status	            Only return Account resources with the given status. Can be closed,
-                    suspended or active
+Parameter          Description
+---------------- | --------------
+FriendlyName     | Only return the Account resources with friendly names that
+                 | exactly match this name.
+Status	         | Only return Account resources with the given status. Can be closed,
+                 | suspended or active
 
 ### Example ###
 ~~~

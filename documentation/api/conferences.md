@@ -2,20 +2,20 @@
 
 %description
 
-NodeName       Description
------------    ---------------
-Sid	           A 34 character string that uniquely identifies this conference.
-FriendlyName   A user provided string that identifies this conference room.
-Status	       A string representing the status of the conference. May be init,
-               in-progress, or completed.
-DateCreated	   The date that this conference was created, given as GMT in 
-               RFC 2822 format.
-DateUpdated	   The date that this conference was last updated, given as GMT in 
-               RFC 2822 format.
-AccountSid	   The unique id of the Account responsible for creating 
-               this conference.
-Uri	           The URI for this resource, relative to 
-               https://api.freewili.com.
+NodeName     | Description
+------------ | ---------------
+Sid	         | A 34 character string that uniquely identifies this conference.
+FriendlyName | A user provided string that identifies this conference room.
+Status	     | A string representing the status of the conference. May be init,
+             | in-progress, or completed.
+DateCreated	 | The date that this conference was created, given as GMT in 
+             | RFC 2822 format.
+DateUpdated	 | The date that this conference was last updated, given as GMT in 
+             | RFC 2822 format.
+AccountSid	 | The unique id of the Account responsible for creating 
+             | this conference.
+Uri	         | The URI for this resource, relative to 
+             | https://api.freewili.com.
 
 
 %GET
@@ -25,17 +25,17 @@ Retrieve a list of all the Conferences which are currently in session belonging 
 ### Query Filters ###
 You can filter the results of the listing based off of 
 
-Parameter	     Description
-------------     ---------------
-Status	         Only show conferences currently in with this status. May be init, in-progress, or completed.
-FriendlyName     List conferences who's FriendlyName is the exact match of this string.
-DateCreated      Only show conferences that started on this date, given as YYYY-MM-DD. 
-                 You can also specify inequality, such as DateCreated<=YYYY-MM-DD for conferences that 
-                 started at or before midnight on a date, and DateCreated>=YYYY-MM-DD for 
-                 conferences that started at or after midnight on a date.
-DateUpdated      Only show conferences that were last updated on this date, given as YYYY-MM-DD.
-                 You can also specify inequality, such as DateUpdated<=YYYY-MM-DD for conferences
-                 that were last updated at or before midnight on a date, and DateUpdated>=YYYY-MM-DD
+Parameter	 | Description
+------------ | ---------------
+Status	     | Only show conferences currently in with this status. May be init, in-progress, or completed.
+FriendlyName | List conferences who's FriendlyName is the exact match of this string.
+DateCreated  | Only show conferences that started on this date, given as YYYY-MM-DD. 
+             | You can also specify inequality, such as DateCreated<=YYYY-MM-DD for conferences that 
+             | started at or before midnight on a date, and DateCreated>=YYYY-MM-DD for 
+             | conferences that started at or after midnight on a date.
+DateUpdated  | Only show conferences that were last updated on this date, given as YYYY-MM-DD.
+             | You can also specify inequality, such as DateUpdated<=YYYY-MM-DD for conferences
+             | that were last updated at or before midnight on a date, and DateUpdated>=YYYY-MM-DD
 
 ### Example ###
 

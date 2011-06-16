@@ -8,28 +8,28 @@ Toll Number Response Data
 
 The following is returned when you are looking for a toll number
 
-NodeName       Description
------------    ---------------
-FriendlyName   A nicely-formatted version of the phone number.
-PhoneNumber	   The phone number, in E.164 (i.e. "+1") format.
-Lata	       The LATA of this phone number.
-RateCenter	   The rate center of this phone number.
-Latitude	   The latitude coordinate of this phone number.
-Longitude      The longitude coordinate of this phone number.
-Region	       The two-letter state or province abbreviation of this phone number.
-PostalCode	   The postal (zip) code of this phone number.
-IsoCountry	   The ISO country code
+NodeName     | Description
+------------ | ---------------
+FriendlyName | A nicely-formatted version of the phone number.
+PhoneNumber	 | The phone number, in E.164 (i.e. "+1") format.
+Lata	     | The LATA of this phone number.
+RateCenter	 | The rate center of this phone number.
+Latitude	 | The latitude coordinate of this phone number.
+Longitude    | The longitude coordinate of this phone number.
+Region	     | The two-letter state or province abbreviation of this phone number.
+PostalCode   | The postal (zip) code of this phone number.
+IsoCountry	 | The ISO country code
 
 Toll-Free Number Response Data
 ------------------------------
 
 The following is returned when you are looking for a toll-free number. Note that there is less data, because there is no postal information.
 
-NodeName       Description
------------    ---------------
-FriendlyName   A nicely-formatted version of the phone number.
-PhoneNumber	   The phone number, in E.164 (i.e. "+1") format.
-IsoCountry	   The ISO country code
+NodeName     | Description
+------------ | ---------------
+FriendlyName | A nicely-formatted version of the phone number.
+PhoneNumber	 | The phone number, in E.164 (i.e. "+1") format.
+IsoCountry	 | The ISO country code
 
 
 %GET.AccountSid
@@ -38,22 +38,22 @@ IsoCountry	   The ISO country code
 You can filter the results of toll number listing by using the following
 parameters as a query
 
-Parameter	     Description
-------------     ---------------
-AreaCode         Find phone numbers in the specified Area Code. Only available for North American numbers.
-Contains         A pattern to match phone numbers on. Valid characters are '*' and 
-                 [0-9a-zA-Z]. The '*' character will match any single digit.
-InRegion         Limit results to a particular region (i.e. State/Province). Given a phone number, 
-                 search within the same Region as that number.
-InPostalCode     Limit results to a particular postal code. Given a phone number, 
-                 search within the same postal code as that number.
+Parameter	 | Description
+------------ | ---------------
+AreaCode     | Find phone numbers in the specified Area Code. Only available for North American numbers.
+Contains     | A pattern to match phone numbers on. Valid characters are '*' and 
+             | [0-9a-zA-Z]. The '*' character will match any single digit.
+InRegion     | Limit results to a particular region (i.e. State/Province). Given a phone number, 
+             | search within the same Region as that number.
+InPostalCode | Limit results to a particular postal code. Given a phone number, 
+             | search within the same postal code as that number.
                  
 Because toll-free numbers don't have postal information you can only use the following parameter to filter your query
 
- Parameter	     Description
-------------     ---------------
-Contains         A pattern to match phone numbers on. Valid characters are '*' and 
-                 [0-9a-zA-Z]. The '*' character will match any single digit.
+ Parameter	 | Description
+------------ | ---------------
+Contains     | A pattern to match phone numbers on. Valid characters are '*' and 
+             | [0-9a-zA-Z]. The '*' character will match any single digit.
 
 ### Toll Examples ###
 ~~~

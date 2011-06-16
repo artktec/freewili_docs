@@ -2,26 +2,26 @@
 
 %description
 
-NodeName                 Description
------------              ---------------
-CallSid	                 A 34 character string that uniquely identifies the call
-                         that is connected to this conference
-ConferenceSid            A 34 character string that identifies the conference
-                         this participant is in
-DateCreated	             The date that this resource was created, given
-                         in  RFC 2822 format.
-DateUpdated	             The date that this resource was last updated, given
-                         in RFC 2822 format.
-AccountSid	             The unique id of the Account that created this 
-                         conference
-Muted	                 True if this participant is currently muted. 
-                         false otherwise.
-StartConferenceOnEnter   Was the startConferenceOnEnter attribute set on this
-                         participant (true or false)?
-EndConferenceOnExit	     Was the endConferenceOnExit attribute set on this
-                         participant (true or false)?
-Uri	                     The URI for this resource, relative to 
-                         https://api.freewili.com.
+NodeName               | Description
+---------------------- | ---------------
+CallSid	               | A 34 character string that uniquely identifies the call
+                       | that is connected to this conference
+ConferenceSid          | A 34 character string that identifies the conference
+                       | this participant is in
+DateCreated	           | The date that this resource was created, given
+                       | in  RFC 2822 format.
+DateUpdated	           | The date that this resource was last updated, given
+                       | in RFC 2822 format.
+AccountSid	           | The unique id of the Account that created this 
+                       | conference
+Muted	               | True if this participant is currently muted. 
+                       | false otherwise.
+StartConferenceOnEnter | Was the startConferenceOnEnter attribute set on this
+                       | participant (true or false)?
+EndConferenceOnExit    | Was the endConferenceOnExit attribute set on this
+                       | participant (true or false)?
+Uri	                   | The URI for this resource, relative to 
+                       | https://api.freewili.com.
 
 
 %GET
@@ -32,10 +32,10 @@ Returns the list of participants in the conference identified by {ConferenceSid}
 You can filter the results of the participants listing by using the following
 parameters as a query
 
-Parameter	     Description
-------------     ---------------
-Muted	         Only show participants that are muted or unmuted. Either true or
-                 false
+Parameter	 | Description
+------------ | ---------------
+Muted	     | Only show participants that are muted or unmuted. Either true or
+             | false
 
 ### Example ###
 

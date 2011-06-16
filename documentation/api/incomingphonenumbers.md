@@ -2,39 +2,39 @@
 
 %description
 
-NodeName                 Description
------------              ---------------
-Sid	                     A 34 character string that uniquely identifies this
-                         resource.
-DateCreated	             The date that this resource was created, given as
-                         GMT RFC 2822 format.
-DateUpdated	             The date that this resource was last updated, given
-                         as GMT RFC 2822 format.
-FriendlyName             A human readable descriptive text for this resource,
-                         up to 64 characters long. By default, the FriendlyName
-                         is a nicely formatted version of the phone number.
-AccountSid	             The unique id of the Account responsible for this phone
-                         number.
-PhoneNumber	             The incoming phone number. e.g., +16175551212
-                         (E.164 format)
-ApiVersion	             Calls to this phone number will start a new TwiML
-                         session with this API version.
-VoiceCallerIdLookup	     Look up the caller's caller-ID name from the CNAM
-                         database (additional charges apply). Either true or
-                         false.
-VoiceUrl	             The URL Freewili will request when this phone number
-                         receives a call.
-VoiceMethod	             The HTTP method Freewili will use when requesting the
-                         above Url. Either GET or POST.
-VoiceFallbackUrl	     The URL that Freewili will request if an error occurs
-                         retrieving or executing the TwiML requested by Url.
-VoiceFallbackMethod      The HTTP method Freewili will use when requesting the
-                         VoiceFallbackUrl. Either GET or POST.
-StatusCallback	         The URL that Freewili will request to pass status
-                         parameters (such as call ended) to your application.
-StatusCallbackMethod	 The HTTP method Freewili will use to make requests to the
-Uri	                     The URI for this resource, relative to
-                         https://api.freewili.com.
+NodeName             | Description
+-------------------- | ---------------
+Sid	                 | A 34 character string that uniquely identifies this
+                     | resource.
+DateCreated	         | The date that this resource was created, given as
+                     | GMT RFC 2822 format.
+DateUpdated	         | The date that this resource was last updated, given
+                     | as GMT RFC 2822 format.
+FriendlyName         | A human readable descriptive text for this resource,
+                     | up to 64 characters long. By default, the FriendlyName
+                     | is a nicely formatted version of the phone number.
+AccountSid	         | The unique id of the Account responsible for this phone
+                     | number.
+PhoneNumber	         | The incoming phone number. e.g., +16175551212
+                     | (E.164 format)
+ApiVersion	         | Calls to this phone number will start a new TwiML
+                     | session with this API version.
+VoiceCallerIdLookup	 | Look up the caller's caller-ID name from the CNAM
+                     | database (additional charges apply). Either true or
+                     | false.
+VoiceUrl	         | The URL Freewili will request when this phone number
+                     | receives a call.
+VoiceMethod	         | The HTTP method Freewili will use when requesting the
+                     | above Url. Either GET or POST.
+VoiceFallbackUrl	 | The URL that Freewili will request if an error occurs
+                     | retrieving or executing the TwiML requested by Url.
+VoiceFallbackMethod  | The HTTP method Freewili will use when requesting the
+                     | VoiceFallbackUrl. Either GET or POST.
+StatusCallback	     | The URL that Freewili will request to pass status
+                     | parameters (such as call ended) to your application.
+StatusCallbackMethod | The HTTP method Freewili will use to make requests to the
+Uri	                 | The URI for this resource, relative to
+                     | https://api.freewili.com.
 
 
 %GET
@@ -46,13 +46,13 @@ representing a phone number given to your account.
 You can filter the results of this listing by using the following
 parameters as a query
 
-Parameter           Description
-------------        --------------
-PhoneNumber         Only show the incoming phone number resources that match
-                    this pattern. You can specify partial numbers and use '*'
-                    as a wildcard for any 
-FriendlyName        Only return the Account resources with friendly names that
-                    exactly match this name.
+Parameter    | Description
+------------ | --------------
+PhoneNumber  | Only show the incoming phone number resources that match
+             | this pattern. You can specify partial numbers and use '*'
+             | as a wildcard for any 
+FriendlyName | Only return the Account resources with friendly names that
+             | exactly match this name.
 
 ### Example ###
 ~~~

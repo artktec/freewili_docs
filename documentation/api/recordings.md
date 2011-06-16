@@ -2,17 +2,17 @@
 
 %description
 
-NodeName                 Description
------------              ---------------
-Sid	                     A 34 character string that uniquely identifies this resource.
-DateCreated	             The date that this resource was created, given in RFC 2822 format.
-DateUpdated	             The date that this resource was last updated, given in RFC 2822 format.
-AccountSid	             The unique id of the Account responsible for this recording.
-CallSid	                 The call during which the recording was made.
-Duration                 The length of the recording, in seconds.
-ApiVersion               The version of the API in use during the recording.
-Uri	                     The URI for this resource, relative to https://api.freewili.com
-SubresourceUris          The list of subresources under this account
+NodeName        | Description
+-----------     | ---------------
+Sid	            | A 34 character string that uniquely identifies this resource.
+DateCreated	    | The date that this resource was created, given in RFC 2822 format.
+DateUpdated	    | The date that this resource was last updated, given in RFC 2822 format.
+AccountSid	    | The unique id of the Account responsible for this recording.
+CallSid	        | The call during which the recording was made.
+Duration        | The length of the recording, in seconds.
+ApiVersion      | The version of the API in use during the recording.
+Uri	            | The URI for this resource, relative to https://api.freewili.com
+SubresourceUris | The list of subresources under this account
 
 
 %GET
@@ -23,13 +23,13 @@ Returns a list of Recording data, each node represents a recording generated dur
 You can filter the results of the recordings listing by using the following
 parameters as a query
 
-Parameter	     Description
-------------     ---------------
-CallSid          Show only recordings made during the call given by this sid.
-DateCreated      Only show recordings created on the given date. Should be 
-                 formatted as YYYY-MM-DD. You can also specify inequality, such
-                 as DateCreated<=YYYY-MM-DD for recordings generated at or 
-                 before midnight on a date, and DateCreated>=YYYY-MM-DD
+Parameter	 | Description
+------------ | ---------------
+CallSid      | Show only recordings made during the call given by this sid.
+DateCreated  | Only show recordings created on the given date. Should be 
+             | formatted as YYYY-MM-DD. You can also specify inequality, such
+             | as DateCreated<=YYYY-MM-DD for recordings generated at or 
+             | before midnight on a date, and DateCreated>=YYYY-MM-DD
                                   
 ### Example ###
 

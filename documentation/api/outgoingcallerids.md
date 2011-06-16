@@ -4,21 +4,21 @@
 
 An OutgoingCallerId instance resource represents a single outgoing caller ID that is validated with Freewili for use when making outgoing calls via the REST API and within the TwiML <Dial> verb. The OutgoingCallerIds list resource represents the set of an account's validated outgoing caller ID phone numbers.
 
-NodeName       Description
------------    ---------------
-Sid	           A 34 character string that uniquely identifies this resource.
-DateCreated	   The date that this resource was created, given in
-               RFC 2822 format.
-DateUpdated	   The date that this resource was last updated, given in
-               RFC 2822 format.
-FriendlyName   A human readable descriptive text for this resource, up to 64
-               characters long. By default, the FriendlyName is a nicely
-               formatted version of the phone number.
-AccountSid	   The unique id of the Account responsible for this Caller Id.
-PhoneNumber	   The incoming phone number. Formatted with a '+' and country code
-               e.g., +16175551212 (E.164 format).
-Uri	           The URI for this resource, relative to 
-               https://api.freewili.com.
+NodeName     | Description
+------------ | ---------------
+Sid	         | A 34 character string that uniquely identifies this resource.
+DateCreated	 | The date that this resource was created, given in
+             | RFC 2822 format.
+DateUpdated	 | The date that this resource was last updated, given in
+             | RFC 2822 format.
+FriendlyName | A human readable descriptive text for this resource, up to 64
+             | characters long. By default, the FriendlyName is a nicely
+             | formatted version of the phone number.
+AccountSid	 | The unique id of the Account responsible for this Caller Id.
+PhoneNumber	 | The incoming phone number. Formatted with a '+' and country code
+             | e.g., +16175551212 (E.164 format).
+Uri	         | The URI for this resource, relative to 
+             | https://api.freewili.com.
 
 
 %GET
@@ -29,12 +29,12 @@ Returns a list of OutgoingCallerId resource representations, each representing a
 You can filter the results of the outgoing callerids listing by using the following
 parameters as a query
 
-Parameter	     Description
-------------     ---------------
-PhoneNumber      Only show the caller id resource that exactly matches
-                 this phone number.
-FriendlyName     Only show the caller id resource that exactly matches 
-                 this name.
+Parameter	 | Description
+------------ | ---------------
+PhoneNumber  | Only show the caller id resource that exactly matches
+             | this phone number.
+FriendlyName | Only show the caller id resource that exactly matches 
+             | this name.
 
 ### Examples ###
 ~~~
